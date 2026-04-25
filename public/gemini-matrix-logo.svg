@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title>Gemini Matrix logo</title>
+  <rect width="256" height="256" rx="28" fill="#000000" />
+  <polygon
+    points="128 18 220 71 220 185 128 238 36 185 36 71"
+    fill="none"
+    stroke="#00ff3b"
+    stroke-linejoin="round"
+    stroke-width="8"
+  />
+  <g
+    fill="none"
+    stroke="#00ff3b"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="8"
+  >
+    <path d="M90 76 H126 L146 111 L126 146 H90 L70 111 Z" />
+    <path d="M166 76 H130 L110 111 L130 146 H166 L186 111 Z" />
+    <circle cx="111" cy="111" r="10" />
+    <circle cx="145" cy="111" r="10" />
+    <path d="M121 104 L136 76" />
+    <path d="M118 121 L100 146" />
+    <path d="M155 121 L171 146" />
+  </g>
+</svg>
