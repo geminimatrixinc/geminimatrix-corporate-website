@@ -193,6 +193,66 @@ button {
     -webkit-text-fill-color: transparent;
   }
 
+  .nav-link {
+    position: relative;
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.45rem;
+    width: 100%;
+    height: 1px;
+    background: var(--brand);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease;
+  }
+
+  .nav-link:hover {
+    color: var(--brand);
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    box-shadow: 0 0 14px rgba(0, 255, 136, 0.42);
+  }
+
+  .hero-tag {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.38rem 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    color: rgba(255, 255, 255, 0.78);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+  }
+
+  .hero-tag::before {
+    content: "";
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 9999px;
+    background: var(--brand);
+    box-shadow: 0 0 8px var(--brand);
+    flex: 0 0 auto;
+  }
+
+  .hero-tag:hover {
+    color: var(--brand);
+    border-color: rgba(0, 255, 136, 0.28);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 20px rgba(0, 255, 136, 0.05);
+  }
+
   .mesh-bg {
     position: absolute;
     inset: 0;
@@ -252,6 +312,37 @@ button {
     );
     box-shadow: 0 0 12px var(--brand);
     animation: scan 4s linear infinite;
+  }
+
+  .hero-sphere-wrap {
+    position: absolute;
+    inset: -1.2rem -1.75rem -0.25rem -1.75rem;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    opacity: 1;
+  }
+
+  .hero-particle-sphere {
+    display: block;
+    width: min(112%, 50rem);
+    aspect-ratio: 1;
+    height: auto;
+    background: transparent;
+  }
+
+  @media (max-width: 1023px) {
+    .hero-sphere-wrap {
+      inset: -0.35rem -0.75rem 0 -0.75rem;
+      justify-content: center;
+      opacity: 0.82;
+    }
+
+    .hero-particle-sphere {
+      width: min(112%, 24rem);
+    }
   }
 
   .btn-primary {

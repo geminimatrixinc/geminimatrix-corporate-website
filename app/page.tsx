@@ -1,9 +1,4 @@
-import Image from "next/image";
-
-const brandLogoTint = {
-  filter:
-    "brightness(1.14) saturate(1.12) contrast(1.02)",
-};
+import HeroParticleGlobe from "./components/HeroParticleGlobe";
 
 const capabilities = [
   {
@@ -113,59 +108,50 @@ export default function Home() {
 
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-white/5 bg-black/60 backdrop-blur-2xl">
-        <div className="shell flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
-          <a href="#top" className="flex w-full items-center justify-center gap-1 md:w-auto md:justify-start">
-            <span
-              className="relative block h-12 w-12 shrink-0 overflow-hidden rounded-xl"
-              style={{
-                boxShadow: "0 0 32px rgba(0,255,136,0.24)",
-              }}
-            >
-              <Image
-                src="/gemini-matrix-logo.png"
-                alt="Gemini Matrix logo"
-                fill
-                priority
-                sizes="48px"
-                className="object-contain p-0.5"
-                style={brandLogoTint}
-              />
-            </span>
-            <div className="flex items-center leading-none">
-              <span className="relative block h-8 w-[230px]">
-                <Image
-                src="/gemini-matrix-text.png"
-                alt="Gemini Matrix"
-                fill
-                priority
-                sizes="230px"
-                className="object-contain"
-                style={brandLogoTint}
-              />
-              </span>
-            </div>
-          </a>
-          <nav className="hidden items-center gap-8 text-sm text-white/70 md:flex">
-            <a href="#capabilities" className="hover:text-white">
-              Capabilities
-            </a>
-            <a href="#water-intel" className="hover:text-white">
-              Water-Intel
-            </a>
-            <a href="#about" className="hover:text-white">
-              About
-            </a>
-            <a href="#contact" className="hover:text-white">
-              Contact
-            </a>
-          </nav>
+        <div className="shell flex flex-col gap-4 py-4 md:grid md:grid-cols-[auto_1fr] md:items-center md:gap-10">
           <a
-            href="#contact"
-            className="btn-primary inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm sm:w-auto md:w-auto md:px-5 md:py-2.5"
+            href="#top"
+            className="flex w-full flex-col items-center justify-center leading-none md:w-auto md:items-start md:justify-start"
           >
-            Start a project
-            <span aria-hidden>→</span>
+            <span className="font-display text-[1.95rem] font-bold uppercase tracking-[0.08em] text-[var(--brand)] sm:text-[2.25rem] md:text-[2rem]">
+              Gemini Matrix
+            </span>
+            <span className="mt-1.5 font-display text-[0.82rem] font-medium uppercase tracking-[0.34em] text-white sm:text-[0.92rem]">
+              Consulting
+            </span>
           </a>
+          <div className="flex w-full items-center justify-end">
+            <div className="hidden items-center gap-8 md:flex">
+              <nav className="flex items-center justify-end gap-8 text-sm text-white/70">
+                <a href="#capabilities" className="nav-link">
+                  Capabilities
+                </a>
+                <a href="#water-intel" className="nav-link">
+                  Water-Intel
+                </a>
+                <a href="#about" className="nav-link">
+                  About
+                </a>
+                <a href="#contact" className="nav-link">
+                  Contact
+                </a>
+              </nav>
+              <a
+                href="#contact"
+                className="btn-primary inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm"
+              >
+                Start a project
+                <span aria-hidden>→</span>
+              </a>
+            </div>
+            <a
+              href="#contact"
+              className="btn-primary inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm sm:w-auto md:hidden"
+            >
+              Start a project
+              <span aria-hidden>→</span>
+            </a>
+          </div>
         </div>
       </header>
 
@@ -174,8 +160,8 @@ export default function Home() {
         id="top"
         className="shell relative z-10 grid gap-12 pt-20 pb-24 lg:grid-cols-12 lg:pt-32 lg:pb-32"
       >
-        <div className="fade-up space-y-8 lg:col-span-7">
-          <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 backdrop-blur">
+        <div className="fade-up relative isolate space-y-8 lg:col-span-7">
+          <div className="relative z-10 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 backdrop-blur">
             <span
               className="h-2 w-2 rounded-full"
               style={{
@@ -184,25 +170,30 @@ export default function Home() {
               }}
             />
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/80">
-              Indigenous-owned · AI / ML / Software
+              Indigenous-owned and operated
             </span>
           </div>
 
-          <h1 className="font-display text-6xl font-bold leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
-            Intelligent
-            <br />
-            systems,
-            <br />
-            <span className="gradient-text">built to think.</span>
-          </h1>
+          <div className="relative max-w-5xl">
+            <div aria-hidden="true" className="hero-sphere-wrap">
+              <HeroParticleGlobe />
+            </div>
+            <h1 className="relative z-10 font-display text-6xl font-bold leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
+              Intelligent
+              <br />
+              systems,
+              <br />
+              <span className="gradient-text">built to think.</span>
+            </h1>
+          </div>
 
-          <p className="max-w-xl text-lg leading-relaxed text-white/70 sm:text-xl">
+          <p className="relative z-10 max-w-xl text-lg leading-relaxed text-white/70 sm:text-xl">
             Gemini Matrix designs and engineers software, AI, and machine
             learning systems that turn raw signal into clear decisions — for
             teams that need substance, not slideware.
           </p>
 
-          <div className="flex flex-col gap-3 sm:flex-row">
+          <div className="relative z-10 flex flex-col gap-3 sm:flex-row">
             <a
               href="#water-intel"
               className="btn-primary inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-base"
@@ -218,11 +209,11 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="flex flex-wrap items-center gap-6 pt-4 font-mono text-xs uppercase tracking-[0.2em] text-white/40">
-            <span>// Software</span>
-            <span>// AI</span>
-            <span>// ML</span>
-            <span>// Data</span>
+          <div className="relative z-10 flex flex-wrap items-center gap-3 pt-4 font-mono text-xs uppercase tracking-[0.2em]">
+            <span className="hero-tag">Software</span>
+            <span className="hero-tag">AI</span>
+            <span className="hero-tag">ML</span>
+            <span className="hero-tag">Data</span>
           </div>
         </div>
 
@@ -695,7 +686,7 @@ export default function Home() {
 
         <footer className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-sm text-white/40 sm:flex-row">
           <p className="font-mono text-xs uppercase tracking-[0.2em]">
-            © {new Date().getFullYear()} Gemini Matrix Consulting
+            © 2026 Gemini Matrix Consulting
           </p>
           <p className="font-mono text-xs uppercase tracking-[0.2em]">
             Indigenous-owned · Built in Canada
