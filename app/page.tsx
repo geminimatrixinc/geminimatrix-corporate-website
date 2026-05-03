@@ -59,6 +59,9 @@ const stats = [
   { value: "AI/ML", label: "Core capability" },
 ];
 
+const WATER_INTEL_DASHBOARD_URL =
+  "https://water.geminimatrixinc.com/dashboard";
+
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
@@ -126,7 +129,12 @@ export default function Home() {
                 <a href="#capabilities" className="nav-link">
                   Capabilities
                 </a>
-                <a href="#water-intel" className="nav-link">
+                <a
+                  href={WATER_INTEL_DASHBOARD_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-link"
+                >
                   Water-Intel
                 </a>
                 <a href="#about" className="nav-link">
@@ -195,7 +203,9 @@ export default function Home() {
 
           <div className="relative z-10 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#water-intel"
+              href={WATER_INTEL_DASHBOARD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-base"
             >
               See Water-Intel
@@ -637,7 +647,9 @@ export default function Home() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="#water-intel"
+                href={WATER_INTEL_DASHBOARD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-ghost inline-flex items-center gap-2 rounded-full px-8 py-4 text-base"
               >
                 See Water-Intel
