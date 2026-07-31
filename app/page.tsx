@@ -1,3 +1,4 @@
+import Image from "next/image";
 import HeroParticleGlobe from "./components/HeroParticleGlobe";
 
 const capabilities = [
@@ -9,25 +10,50 @@ const capabilities = [
     items: ["Next.js platforms", "API architecture", "Workflow automation"],
   },
   {
-    tag: "02 / Intelligence",
+    tag: "02 / Integration",
+    title: "AI integration and adoption",
+    description:
+      "Integrate Copilot, Claude, and Gemini into real workflows with practical enablement.",
+    items: [
+      "Copilot enablement",
+      "Claude and Gemini workflows",
+      "Governance and guardrails",
+    ],
+  },
+  {
+    tag: "03 / Intelligence",
     title: "AI systems",
     description:
       "Applied AI that translates raw signal into clear, explainable decisions.",
     items: ["LLM integrations", "RAG pipelines", "Decision support"],
   },
   {
-    tag: "03 / Models",
+    tag: "04 / Models",
     title: "Machine learning",
     description:
       "ML systems for anomaly detection, forecasting, and risk interpretation.",
     items: ["Anomaly detection", "Forecasting", "Model explainability"],
   },
+];
+
+const aiIntegrationFocus = [
   {
-    tag: "04 / Data",
-    title: "Data platforms",
+    tag: "ADOPTION / 01",
+    title: "Workflow-first rollout",
     description:
-      "Pipelines and analytics that turn fragmented data into operational intelligence.",
-    items: ["Ingestion pipelines", "Dashboards", "Reporting systems"],
+      "Map high-value use cases, then embed AI where teams already work instead of adding another disconnected tool.",
+  },
+  {
+    tag: "ADOPTION / 02",
+    title: "Team enablement",
+    description:
+      "Practical playbooks, prompt patterns, and role-based coaching so adoption is measurable and repeatable.",
+  },
+  {
+    tag: "ADOPTION / 03",
+    title: "Guardrails and governance",
+    description:
+      "Lightweight policies for security, quality, and responsible usage across Copilot, Claude, Gemini, and custom assistants.",
   },
 ];
 
@@ -129,6 +155,9 @@ export default function Home() {
                 <a href="#capabilities" className="nav-link">
                   Capabilities
                 </a>
+                <a href="#ai-integrator" className="nav-link">
+                  AI Integrator
+                </a>
                 <a
                   href={WATER_INTEL_DASHBOARD_URL}
                   target="_blank"
@@ -191,14 +220,14 @@ export default function Home() {
               <br />
               systems,
               <br />
-              <span className="gradient-text">built to think.</span>
+              <span className="gradient-text">adopted to deliver.</span>
             </h1>
           </div>
 
           <p className="relative z-10 max-w-xl text-lg leading-relaxed text-white/70 sm:text-xl">
-            Gemini Matrix designs and engineers software, AI, and machine
-            learning systems that turn raw signal into clear decisions — for
-            teams that need substance, not slideware.
+            Gemini Matrix builds custom software, AI, and machine learning,
+            then helps teams operationalize tools like Copilot, Claude, and
+            Gemini in day-to-day delivery.
           </p>
 
           <div className="relative z-10 flex flex-col gap-3 sm:flex-row">
@@ -223,7 +252,7 @@ export default function Home() {
             <span className="hero-tag">Software</span>
             <span className="hero-tag">AI</span>
             <span className="hero-tag">ML</span>
-            <span className="hero-tag">Data</span>
+            <span className="hero-tag">AI Adoption</span>
           </div>
         </div>
 
@@ -342,13 +371,13 @@ export default function Home() {
         <div className="mb-16 max-w-3xl">
           <p className="eyebrow">Capabilities</p>
           <h2 className="mt-6 font-display text-5xl font-bold leading-tight tracking-tight sm:text-6xl">
-            Four disciplines.
+            Build it.
             <br />
-            <span className="gradient-text">One integrated practice.</span>
+            <span className="gradient-text">Integrate it. Adopt it.</span>
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-white/60">
-            Software, AI, machine learning, and data — engineered together
-            into systems that ship and stay useful.
+            Software engineering, AI delivery, machine learning, and AI
+            adoption support in one partner model.
           </p>
         </div>
 
@@ -410,6 +439,35 @@ export default function Home() {
                   </span>
                 ))}
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* AI INTEGRATOR */}
+      <section id="ai-integrator" className="shell relative z-10 pb-24 lg:pb-32">
+        <div className="mb-12 max-w-3xl">
+          <p className="eyebrow">AI Integrator</p>
+          <h2 className="mt-6 font-display text-5xl font-bold leading-tight tracking-tight sm:text-6xl">
+            Adoption that actually sticks.
+          </h2>
+          <p className="mt-6 text-lg leading-relaxed text-white/60">
+            Beyond model builds, Gemini Matrix helps organizations adopt AI with
+            the right platform choices, workflow design, and responsible usage
+            standards.
+          </p>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {aiIntegrationFocus.map((focus) => (
+            <article key={focus.title} className="glass p-6">
+              <p className="eyebrow text-[10px]">{focus.tag}</p>
+              <h3 className="mt-4 font-display text-2xl font-bold tracking-tight">
+                {focus.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-white/65">
+                {focus.description}
+              </p>
             </article>
           ))}
         </div>
@@ -575,10 +633,9 @@ export default function Home() {
               <span className="gradient-text">Grounded in trust.</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-white/65">
-              Gemini Matrix is an Indigenous-owned technology practice
-              focused on building useful software and AI systems. Strong
-              engineering, applied intelligence, and honest delivery — for
-              teams and communities that need real outcomes.
+              Gemini Matrix is an Indigenous-owned technology practice focused
+              on building useful software and AI systems, then helping teams
+              adopt and govern those capabilities with confidence.
             </p>
           </div>
 
@@ -635,8 +692,8 @@ export default function Home() {
               <span className="gradient-text">something intelligent?</span>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/65">
-              Software builds, AI integrations, ML systems, or a Water-Intel
-              walkthrough — start a conversation.
+              Software delivery, AI and ML systems, and practical adoption of
+              Copilot, Claude, and Gemini across your business.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
@@ -693,12 +750,31 @@ export default function Home() {
                 </address>
               </div>
             </div>
+
+            <div className="mx-auto mt-12 flex max-w-4xl flex-col items-center border-t border-white/10 pt-10">
+              <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-white/45">
+                Indigenous Business Certification
+              </p>
+              <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
+                <Image
+                  src="/CCIB-PrimaryLogo_CIB-Transparent-Lockup.png"
+                  alt="Canadian Council for Indigenous Business certification logo"
+                  width={420}
+                  height={120}
+                  className="h-auto w-[260px] sm:w-[320px]"
+                  priority={false}
+                />
+              </div>
+            </div>
           </div>
         </div>
 
         <footer className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-sm text-white/40 sm:flex-row">
           <p className="font-mono text-xs uppercase tracking-[0.2em]">
             © 2026 Gemini Matrix Consulting
+          </p>
+          <p className="font-mono text-xs uppercase tracking-[0.2em]">
+            Site version v1.1
           </p>
           <p className="font-mono text-xs uppercase tracking-[0.2em]">
             Indigenous-owned · Built in Canada

@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Gemini Matrix Consulting",
   description:
-    "Gemini Matrix Consulting builds practical software, AI, and machine learning solutions with community-aware strategy and real-world delivery experience.",
+    "Gemini Matrix Consulting builds practical software, AI, and machine learning solutions, and helps teams adopt tools like Copilot, Claude, and Gemini with confidence.",
   icons: {
     icon: "/gemini-matrix-logo.png",
     shortcut: "/gemini-matrix-logo.png",
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Gemini Matrix Consulting",
     description:
-      "Software development, AI, machine learning, and data strategy grounded in practical outcomes and community-aware delivery.",
+      "Software development, AI, machine learning, and practical AI adoption strategy grounded in real outcomes.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Gemini Matrix Consulting",
     description:
-      "Software development, AI, machine learning, and data strategy grounded in practical outcomes and community-aware delivery.",
+      "Software development, AI, machine learning, and practical AI adoption strategy grounded in real outcomes.",
   },
 };
 
